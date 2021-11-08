@@ -6,7 +6,7 @@ import './style.less'
 const StatisticalReportCom = () => {
     const [form] = Form.useForm();
     const [params, setParams] = useState({
-        name: '张三',
+        foo: '张三',
         age: 18
     })
     const formLayout = {
@@ -17,17 +17,28 @@ const StatisticalReportCom = () => {
     //     name: '炸鸡',
     //     age: 20
     // }
+    // 结论----不支持vue式的写法
     return (
         <div>
             <Form
                 layout='inline'
                 // {...formLayout}
+                labelCol={{ span: 6 }}
+                // wrapperCol={{span: 15}}
                 form={form}
+                size='middle'
+                name='zjp'
+                labelAlign='left'
                 className="ant-advanced-search-form"
                 style={{maxWidth: '100%', overflow: 'hidden'}}
                 // initialValues={params}
                 onFinish={(all) => {
-                    console.log(all, 'aaaaa');
+                    console.log(all, params, 'aaaaa');
+                }}
+                onValuesChange={(all) => {
+                    console.log(all, 'bbbb');
+
+                    setParams(all)
                 }}
                 // onValuesChange={onFormLayoutChange}
             >
@@ -41,12 +52,18 @@ const StatisticalReportCom = () => {
                 {/* <Row gutter={[10, 20]} style={{border: '1px solid red'}}> */}
                 <Col span={4}>
                     <Item label="name">
-                        <Input value={params.name} placeholder="input placeholder" />
+                        <Input 
+                        defaultValue={params.foo} 
+                        placeholder="input placeholder" 
+                        />
                     </Item>
                 </Col>
                 <Col span={4}>
                     <Item label="age">
-                        <Input value={params.age} placeholder="input placeholder" />
+                        <Input 
+                        defaultValue={params.age} 
+                        placeholder="input placeholder" 
+                        />
                     </Item>
                 </Col>
                 <Col span={6}>
