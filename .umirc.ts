@@ -11,6 +11,8 @@ export default defineConfig({
     { path: '/tabelgroup', component: '@/pages/tabelGroup' },
     { path: '/tabelgroup1', component: '@/pages/tabelGroup1' },
     { path: '/tabelgroup3', component: '@/pages/tabelGroup3' },
+    { path: '/tabelgroup4', component: '@/pages/tabelGroup4' },
+    { path: '/kucun', component: '@/pages/StatisticalReport' },
   ],
   fastRefresh: {},
 });
