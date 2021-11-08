@@ -7,6 +7,10 @@ export default defineConfig({
   routes: [
     { path: '/', component: '@/pages/index' },
     { path: '/contexttest', component: '@/pages/context-test' },
+    { path: '/tabel', component: '@/pages/tabelCom' },
+    { path: '/tabelgroup', component: '@/pages/tabelGroup' },
+    { path: '/tabelgroup1', component: '@/pages/tabelGroup1' },
+    { path: '/tabelgroup2', component: '@/pages/tabelGroup2' },
   ],
   fastRefresh: {},
 });
