@@ -10,7 +10,7 @@ export default defineConfig({
     { path: '/tabel', component: '@/pages/tabelCom' },
     { path: '/tabelgroup', component: '@/pages/tabelGroup' },
     { path: '/tabelgroup1', component: '@/pages/tabelGroup1' },
-    { path: '/tabelgroup2', component: '@/pages/tabelGroup2' },
+    { path: '/tabelgroup3', component: '@/pages/tabelGroup3' },
   ],
   fastRefresh: {},
 });
