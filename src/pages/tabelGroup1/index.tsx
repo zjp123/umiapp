@@ -5,87 +5,96 @@ export default function TabelGroup() {
 
     const columns: any = [
         {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
+            title: '学员报名时间',
+            dataIndex: 'year',
+            key: 'year',
             width: 100,
             fixed: 'left',
-            filters: [
-            {
-                text: 'Joe',
-                value: 'Joe',
-            },
-            {
-                text: 'John',
-                value: 'John',
-            },
-            ],
-            onFilter: (value: any, record: any) => record.name.indexOf(value) === 0,
+            // filters: [
+            // {
+            //     text: 'Joe',
+            //     value: 'Joe',
+            // },
+            // {
+            //     text: 'John',
+            //     value: 'John',
+            // },
+            // ],
+            // onFilter: (value: any, record: any) => record.name.indexOf(value) === 0,
         },
         {
-            title: 'Age',
-            dataIndex: 'age',
-            key: 'age',
+            title: '报名学员总数',
+            dataIndex: 'total',
+            key: 'total',
             width: 150,
             sorter: (a: any, b: any) => a.age - b.age,
         },
         {
-            title: 'Other',
+            title: '学员当前状态',
             children: [
                 {
-                    title: 'Street',
-                    dataIndex: 'street',
-                    key: 'street',
+                    title: '科一(未受理)',
+                    dataIndex: 'keyinot',
+                    key: 'keyinot',
                     width: 150,
                 },
                 {
-                    title: 'Building',
-                    dataIndex: 'building',
-                    key: 'building',
+                    title: '科一(已受理)',
+                    dataIndex: 'keyishou',
+                    key: 'keyishou',
                     width: 100,
                 },
                 {
-                    title: 'Door No.',
-                    dataIndex: 'number',
-                    key: 'number',
+                    title: '科二',
+                    dataIndex: 'keer',
+                    key: 'keer',
                     width: 100,
                 },
                 {
-                    title: 'Company Address',
-                    dataIndex: 'companyAddress',
-                    key: 'companyAddress',
+                    title: '科三',
+                    dataIndex: 'kesan',
+                    key: 'kesan',
                     width: 200,
                 },
                 {
-                    title: 'Company Name',
-                    dataIndex: 'companyName',
-                    key: 'companyName',
+                    title: '科四',
+                    dataIndex: 'kesi',
+                    key: 'compakesinyName',
                 },
                 {
-                    title: 'Gender',
-                    dataIndex: 'gender',
-                    key: 'gender',
+                    title: '结业',
+                    dataIndex: 'jieye',
+                    key: 'jieye',
                     width: 80,
                     fixed: 'right',
-                }
+                },
+                {
+                  title: '其他',
+                  dataIndex: 'qita',
+                  key: 'qita',
+                  width: 80,
+                  fixed: 'right',
+              }
             ]
         }
     ];
 
     const data = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10; i++) {
         data.push({
             key: i,
-            name: 'John Brown',
-            age: i + 1,
-            street: 2,
-            building: 1,
-            number: 2035,
-            companyAddress: 1,
-            companyName: 2,
-            gender: 3,
+            year: 200 + '' + i,
+            total: i + 1,
+            keyinot: 2,
+            keyishou: 1,
+            keer: 2035,
+            kesan: 1,
+            kesi: 2,
+            jieye: 3,
+            qita: 5
         });
     }
+    console.log(data);
     return <Table
             columns={columns}
             dataSource={data}
@@ -100,15 +109,17 @@ export default function TabelGroup() {
                 let totalcompanyAddress = 0;
                 let totalcompanyName = 0;
                 let totalgender = 0;
+                let totalQita = 0;
         
-                pageData.forEach(({ age, street, building, number, companyAddress, companyName, gender }) => {
-                  totalage += age;
-                  totalstreet += street;
-                  totalbuilding += building;
-                  totalnumber += number;
-                  totalcompanyAddress += companyAddress;
-                  totalcompanyName += companyName;
-                  totalgender += gender;
+                pageData.forEach(({ total, keyinot, keyishou, keer, kesan, kesi, jieye, qita }) => {
+                  totalage += total;
+                  totalstreet += keyinot;
+                  totalbuilding += keyishou;
+                  totalnumber += keer;
+                  totalcompanyAddress += kesan;
+                  totalcompanyName += kesi;
+                  totalgender += jieye;
+                  totalQita += qita
                 });
         
                 return (
@@ -135,6 +146,9 @@ export default function TabelGroup() {
                       </Table.Summary.Cell>
                       <Table.Summary.Cell index={totalgender}>
                         <Text type="danger">{totalgender}</Text>
+                      </Table.Summary.Cell>
+                      <Table.Summary.Cell index={totalgender}>
+                        <Text type="danger">{totalQita}</Text>
                       </Table.Summary.Cell>
                       {/* <Table.Summary.Cell>
                         <Text>{totalRepayment}</Text>
