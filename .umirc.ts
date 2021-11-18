@@ -13,6 +13,7 @@ export default defineConfig({
     { path: '/tabelgroup3', component: '@/pages/tabelGroup3' },
     { path: '/tabelgroup4', component: '@/pages/tabelGroup4' },
     { path: '/kucun', component: '@/pages/StatisticalReport' },
+    { path: '/modal', component: '@/pages/modaltest' },
   ],
   fastRefresh: {},
 });
