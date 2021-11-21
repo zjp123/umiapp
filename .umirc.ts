@@ -14,6 +14,8 @@ export default defineConfig({
     { path: '/tabelgroup4', component: '@/pages/tabelGroup4' },
     { path: '/kucun', component: '@/pages/StatisticalReport' },
     { path: '/modal', component: '@/pages/modaltest' },
+    { path: '/derivedState', component: '@/pages/derivedStateFromProp' },
+    
   ],
   fastRefresh: {},
 });
