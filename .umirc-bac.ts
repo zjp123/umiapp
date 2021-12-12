@@ -15,7 +15,6 @@ export default defineConfig({
     { path: '/kucun', component: '@/pages/StatisticalReport' },
     { path: '/modal', component: '@/pages/modaltest' },
     { path: '/derivedState', component: '@/pages/derivedStateFromProp' },
-    
   ],
   fastRefresh: {},
 });

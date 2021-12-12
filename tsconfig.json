@@ -20,8 +20,9 @@
     "mock/**/*",
     "src/**/*",
     "config/**/*",
-    ".umirc.ts",
-    "typings.d.ts"
+    ".umirc-bac.ts",
+    "typings.d.ts",
+    "app.ts"
   ],
   "exclude": [
     "node_modules",
