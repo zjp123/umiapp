@@ -1,12 +1,20 @@
 // import styles from './index.less';
 import { Table } from 'antd';
 import { connectMaster } from 'umi';
+import { useEffect } from 'react';
 interface ObjP {
   children: any;
   props: any;
 }
 function TabelCom(props: any) {
   console.log(props, 'propspropsprops');
+
+  // props.onGlobalStateChange((state: any, prev: any) => {
+  //   // state: 变更后的状态; prev 变更前的状态
+  //   console.log(state, prev);
+  // })
+  // useEffect(() => { props.newSetGlobalState({str: 'bbb'})  }, [])
+  // console.log('masterProps', props)
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
   // const masterProps = useModel('@@qiankunStateFromMaster');
@@ -127,7 +135,7 @@ function TabelCom(props: any) {
       <button
         onClick={() => {
           props.setMasterState({
-            ctt: '过劲',
+            str: '过劲',
           });
         }}
       >
