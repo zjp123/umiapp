@@ -124,6 +124,15 @@ function TabelCom(props: any) {
   return (
     <>
       <Table columns={columns} dataSource={data} bordered />
+      <button
+        onClick={() => {
+          props.setMasterState({
+            ctt: '过劲',
+          });
+        }}
+      >
+        点我
+      </button>
     </>
   );
 }
