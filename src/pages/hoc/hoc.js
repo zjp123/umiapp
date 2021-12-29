@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import arr from '../../appinfo';
+// import EnhancedComponent from '../hoc-ref2/hoc-ref2';
 import EnhancedComponent from '../hoc-ref/hoc-ref';
 
 const ref = React.createRef();
 
 class MyClassComponent extends Component {
   render() {
-    return <div>ccccc{String(arr)}</div>;
+    return <div>ccccc</div>;
   }
 }
 
