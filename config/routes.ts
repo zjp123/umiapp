@@ -9,6 +9,7 @@ export default [
   { path: '/kucun', component: '@/pages/StatisticalReport' },
   { path: '/modal', component: '@/pages/modaltest' },
   { path: '/derivedState', component: '@/pages/derivedStateFromProp' },
+  { path: '/hocref', component: '@/pages/hoc-ref/hoc-ref.js' },
   { path: '/hoc', component: '@/pages/hoc/hoc.js' },
   { path: '/filelet', component: '@/pages/file-let/file-let.js' },
   // { path: '/app1', component: '@/micro/app1' },
