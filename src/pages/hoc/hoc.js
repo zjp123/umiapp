@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
+import arr from '../../appinfo';
 class MyClassComponent extends Component {
   render() {
-    return <div>ccccc</div>;
+    return <div>ccccc{String(arr)}</div>;
   }
 }
 
