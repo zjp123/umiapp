@@ -1,6 +1,6 @@
 import React, { Component, useEffect } from 'react';
 import { setMain, getMain } from './main';
-import arr from '../../appinfo';
+import { arr } from '../../appinfo';
 import event from '../../customEvent';
 import MyFuncComponent from './moduletest';
 const Filelet = () => {
@@ -21,7 +21,7 @@ const Filelet = () => {
           // main.appInfo.changeStatus()
           // appinfo.appInfo.status = 'llllll'
           arr.push('jwwjk');
-          document.dispatchEvent(event);
+          // document.dispatchEvent(event);
           // arr = 100
           console.log(arr, '999');
         }}

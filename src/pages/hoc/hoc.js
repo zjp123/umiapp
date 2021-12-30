@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import arr from '../../appinfo';
+import { arr } from '../../appinfo';
 // import EnhancedComponent from '../hoc-ref2/hoc-ref2';
 import EnhancedComponent from '../hoc-ref/hoc-ref';
 // import event from '../../customEvent';
@@ -11,9 +11,9 @@ class MyClassComponent extends Component {
     // document.addEventListener("cat",function(){
     //   console.log('MyClassComponent', arr)
     // },false)
-    // setTimeout(() => {
-    //   console.log('MyClassComponent', arr);
-    // }, 10000);
+    setTimeout(() => {
+      console.log('MyClassComponent', arr);
+    }, 15000);
   }
   render() {
     return <div>ccccc{String(arr)}</div>;
