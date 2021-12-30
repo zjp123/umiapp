@@ -14,11 +14,11 @@ class MyClassComponent extends Component {
 }
 // 结论： 反向继承时  不可做refs透传
 
-const HAAAA = React.forwardRef((props, ref) => <MyClassComponent ref={ref} />);
+// const HAAAA = React.forwardRef((props, ref) => <MyClassComponent {...props} ref={ref} />);
 
 function withLogging(WrappedComponent) {
-  console.log(WrappedComponent, 'WrappedComponent');
-  class Enhance extends React.Component {
+  // console.log(WrappedComponent, 'WrappedComponent');
+  class Enhance extends WrappedComponent {
     // state = {
     //   name: 'haha',
     // };
@@ -38,7 +38,7 @@ function withLogging(WrappedComponent) {
     render() {
       const { forwardedRef, ...rest } = this.props;
       // 把 forwardedRef 赋值给 ref
-      return <WrappedComponent {...rest} ref={forwardedRef} />;
+      return <WrappedComponent kk="haha" {...rest} ref={forwardedRef} />;
     }
   }
   // const Enhance = (props) => {
@@ -55,11 +55,11 @@ function withLogging(WrappedComponent) {
 
   // return React.forwardRef(forwardRef);
   return React.forwardRef((props, ref) => {
-    console.log(ref);
+    // console.log(ref);
     return <Enhance {...props} forwardedRef={ref} />;
   });
 }
-const EnhancedComponent = withLogging(HAAAA);
+const EnhancedComponent = withLogging(MyClassComponent);
 
 export default EnhancedComponent;
 

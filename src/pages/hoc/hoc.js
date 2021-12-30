@@ -11,18 +11,18 @@ class MyClassComponent extends Component {
     // document.addEventListener("cat",function(){
     //   console.log('MyClassComponent', arr)
     // },false)
-    setTimeout(() => {
-      console.log('MyClassComponent', arr);
-    }, 10000);
+    // setTimeout(() => {
+    //   console.log('MyClassComponent', arr);
+    // }, 10000);
   }
   render() {
     return <div>ccccc{String(arr)}</div>;
   }
 }
 
-const MyFuncComponent = (props) => {
-  return <div>bbbb</div>;
-};
+// const MyFuncComponent = (props) => {
+//   return <div>bbbb</div>;
+// };
 
 class WrappedComponent extends Component {
   componentDidMount() {
