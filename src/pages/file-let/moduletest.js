@@ -5,7 +5,7 @@ const MyFuncComponent = (props) => {
   useEffect(() => {
     setTimeout(() => {
       console.log(arr);
-    }, 5000);
+    }, 3000);
   }, []);
   return <div>bbbb</div>;
 };
