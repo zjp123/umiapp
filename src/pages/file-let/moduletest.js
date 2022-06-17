@@ -1,5 +1,5 @@
 import React, { Component, useEffect } from 'react';
-import arr from '../../appinfo';
+import { arr } from '../../appinfo';
 
 const MyFuncComponent = (props) => {
   useEffect(() => {

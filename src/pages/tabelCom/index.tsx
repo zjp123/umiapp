@@ -1,6 +1,8 @@
 // import styles from './index.less';
 import { Table } from 'antd';
 import { connectMaster } from 'umi';
+// import '../../../yalc.lock'
+require('../../../yalc.lock');
 interface ObjP {
   children: any;
   props: any;
