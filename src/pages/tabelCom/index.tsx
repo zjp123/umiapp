@@ -3,6 +3,7 @@ import { Table } from 'antd';
 import { connectMaster } from 'umi';
 // import '../../../yalc.lock'
 require('../../../yalc.lock');
+// require('../../../add-file.lock');
 interface ObjP {
   children: any;
   props: any;

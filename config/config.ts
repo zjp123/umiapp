@@ -1,4 +1,7 @@
 import { defineConfig } from 'umi';
+// const FileListPlugin = require('../myplugins/fileplugin.js')
+// const AddFileWatchPlugin = require('../myplugins/addFileWatch.js')
+
 const path = require('path');
 import routes from './routes';
 export default defineConfig({
@@ -23,7 +26,7 @@ export default defineConfig({
     slave: {},
   },
   chainWebpack: function (config, { webpack }) {
-    config.resolve.extensions.add('.lock');
+    // config.resolve.extensions.add('.lock');
     // config.module.rule('lock').include.add('../').end();
     // config.module.rule('compile').test(/\.lock$/).use('babel').loader('../src/loader/yalc.js')
     config.module
@@ -33,5 +36,13 @@ export default defineConfig({
       .end()
       .use('babel')
       .loader(require.resolve('../src/loader/yalc.js'));
+
+    // config.plugin('FileListPlugin').use(FileListPlugin)
+    config
+      .plugin('AddFileWatchPlugin')
+      .use(require.resolve('../myplugins/addFileWatch.js'));
+    // config.plugin('AddFileWatchPlugin').init(() => new AddFileWatchPlugin())
+
+    console.log(config.toString(), 'hhhhh');
   },
 });

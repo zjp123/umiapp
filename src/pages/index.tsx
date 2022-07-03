@@ -13,7 +13,7 @@ function IndexPage(props: any) {
   }, []);
   return (
     <div>
-      <h1 className={styles.title}>子应用app1{props.masterState.str}</h1>
+      <h1 className={styles.title}>子应用app1{props?.masterState?.str}</h1>
       {/* <h1 className={styles.title}>子应用app1{masterProps.masterState.str}</h1> */}
     </div>
   );
