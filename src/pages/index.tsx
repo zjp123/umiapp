@@ -9,6 +9,7 @@ import { connectMaster, history } from 'umi';
 
 function IndexPage(props: any) {
   // const masterProps = useModel('@@qiankunStateFromMaster');
+  console.log('每次都走吗?');
   useEffect(() => {
     setTimeout(() => {
       props.setMasterState({ str: 'bbb' });
@@ -24,7 +25,7 @@ function IndexPage(props: any) {
         </button>
       </div>
       {/* <h1 className={styles.title}>子应用app1{masterProps.masterState.str}</h1> */}
-      {props?.children && props?.children}
+      {props?.children && props.children}
     </div>
   );
 }
