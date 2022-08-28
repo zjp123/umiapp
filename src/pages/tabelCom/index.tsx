@@ -4,15 +4,23 @@ import { connectMaster } from 'umi';
 // import '../../../yalc.lock'
 require('../../../yalc.lock');
 // require('../../../add-file.lock');
+// import { Arr } from  '../testArr' //
 interface ObjP {
   children: any;
   props: any;
 }
+
 function TabelCom(props: any) {
+  // 每次路由切换 只是这个组件函数重新执行，它以外的变量或者文件也就是模块，并不是重新
+  // 执行的
+  const Arr2 = ['oo', 'pp', 'aa', 'bb', 'ee'];
   console.log(props, 'propspropsprops');
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
   // const masterProps = useModel('@@qiankunStateFromMaster');
+
+  Arr2.push('zjp');
+  console.log(Arr2, 'lllllll');
 
   const renderContent = (value: any, row: any, index: any) => {
     const obj: ObjP = {
