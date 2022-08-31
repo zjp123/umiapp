@@ -1,10 +1,11 @@
-import { Radio, Space, Tag, TimePicker } from 'antd';
+import { DatePicker, Radio, Space, Tag, TimePicker } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { Button, Form, Input, Popconfirm, Table, Select } from 'antd';
 // import type { FormInstance } from 'antd/es/form';
 import _ from 'lodash';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './index.less';
+const { Option } = Select;
 
 const AddTable: React.FC = () => {
   // const paramsArr: [any] = [{name: undefined, age: undefined, address: undefined}]
@@ -193,6 +194,17 @@ const AddTable: React.FC = () => {
     console.log(form.getFieldsValue(), '>>>>>>>>>');
   };
 
+  // const prefixSelector = (
+  //   <Form.Item name="prefix" noStyle>
+  //     <Select style={{ width: 70 }} onChange={() => {
+  //       form.setFieldsValue({'phone': 88})
+  //     }}>
+  //       <Option value="86">+86</Option>
+  //       <Option value="87">+87</Option>
+  //     </Select>
+  //   </Form.Item>
+  // );
+
   return (
     <div>
       <Button onClick={handleAdd} type="primary" style={{ marginBottom: 16 }}>
@@ -205,7 +217,30 @@ const AddTable: React.FC = () => {
       >
         获取form值
       </Button>
-      <Form form={form}>
+      <Form
+        form={form}
+        initialValues={{
+          prefix: '86',
+        }}
+      >
+        <div className="row-style">
+          <Form.Item name="prefix" noStyle>
+            <Select
+              style={{ width: 80 }}
+              onChange={() => {
+                form.setFieldsValue({ phone: 88 });
+              }}
+            >
+              <Option value="86">+86</Option>
+              <Option value="87">+87</Option>
+            </Select>
+          </Form.Item>
+          <Form.Item name="phone">
+            {/* <Input addonBefore={prefixSelector} style={{ width: '100%' }} /> */}
+            <DatePicker.RangePicker style={{ width: '100%' }} />
+          </Form.Item>
+        </div>
+
         <Table bordered dataSource={data} columns={columns} rowKey="id" />
       </Form>
     </div>
