@@ -13,6 +13,7 @@ export default [
   { path: '/hocre2', component: '@/pages/hoc-ref2/hoc-ref2.js' },
   { path: '/hoc', component: '@/pages/hoc/hoc.js' },
   { path: '/filelet', component: '@/pages/file-let/file-let.js' },
+  { path: '/addtable', component: '@/pages/addtable' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
