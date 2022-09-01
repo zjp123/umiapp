@@ -96,6 +96,7 @@ const AddTable: React.FC = () => {
           onChange={(e) => {
             const arrnew = _.cloneDeep(data);
             arrnew[index].address = e.target.value;
+            // data[index].address = e.target.value;
             setData(arrnew);
           }}
         >
@@ -110,6 +111,11 @@ const AddTable: React.FC = () => {
       key: 'time',
       render: (text: any, record: any, index: any) => (
         <TimePicker.RangePicker
+          value={
+            record.time
+              ? [moment('12:00:00', 'HH:mm:ss'), moment('22:00:00', 'HH:mm:ss')]
+              : [moment('00:00:00', 'HH:mm:ss'), moment('23:59:59', 'HH:mm:ss')]
+          }
           defaultValue={[
             moment('00:00:00', 'HH:mm:ss'),
             moment('23:59:59', 'HH:mm:ss'),
