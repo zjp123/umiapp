@@ -1,9 +1,22 @@
-import { DatePicker, Radio, Space, Tag, TimePicker } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import { Button, Form, Input, Popconfirm, Table, Select } from 'antd';
+import {
+  Button,
+  Form,
+  Input,
+  Popconfirm,
+  Table,
+  Select,
+  DatePicker,
+  Radio,
+  Space,
+  Tag,
+  TimePicker,
+} from 'antd';
 // import type { FormInstance } from 'antd/es/form';
 import _ from 'lodash';
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+
 import './index.less';
 const { Option } = Select;
 
@@ -121,58 +134,6 @@ const AddTable: React.FC = () => {
     },
   ];
 
-  // const [name, setName] = useState('')
-
-  // const data: any = [
-  //   {
-  //     key: '1',
-  //     name: <Select style={{width: '150px'}} value={paramsArr[0].name} placeholder='请选择' onChange={(value) => {
-  //       // console.log(value)
-  //       // setName(value)
-  //       paramsArr[0].name = value
-  //     }}>
-  //       <Select.Option value="lucy">Lucy</Select.Option>
-  //       <Select.Option value="json">json</Select.Option>
-  //       <Select.Option value="marui">marui</Select.Option>
-  //     </Select>,
-  //     age: <Select style={{width: '150px'}} value={paramsArr[0].age} placeholder='请选择' onChange={(value) => {
-  //       // console.log(value)
-  //       // setName(value)
-  //       paramsArr[0].age = value
-  //     }}>
-  //       <Select.Option value={18}>Lucy</Select.Option>
-  //       <Select.Option value={28}>json</Select.Option>
-  //       <Select.Option value={30}>marui</Select.Option>
-  //     </Select>,
-  //     address: <Radio.Group onChange={(value) => {
-  //       paramsArr[0].address = value
-
-  //     }} value={paramsArr[0].address}>
-  //       <Radio value={1}>A</Radio>
-  //       <Radio value={2}>B</Radio>
-  //     </Radio.Group>,
-  //     // tags: ['nice', 'developer'],
-  //   },
-  //   // {
-  //   //   key: '2',
-  //   //   name: 'Jim Green',
-  //   //   age: 42,
-  //   //   address: 'London No. 1 Lake Park',
-  //   //   tags: ['loser'],
-  //   // },
-  //   // {
-  //   //   key: '3',
-  //   //   name: 'Joe Black',
-  //   //   age: 32,
-  //   //   address: 'Sidney No. 1 Lake Park',
-  //   //   tags: ['cool', 'teacher'],
-  //   // },
-  // ];
-  // const aa = paramsArr.map((item) => {
-  //   return 99
-  // })
-  // console.log(aa, 'llll')
-
   useEffect(() => {
     console.log(data, 'pppp');
   }, [data]);
@@ -194,16 +155,12 @@ const AddTable: React.FC = () => {
     console.log(form.getFieldsValue(), '>>>>>>>>>');
   };
 
-  // const prefixSelector = (
-  //   <Form.Item name="prefix" noStyle>
-  //     <Select style={{ width: 70 }} onChange={() => {
-  //       form.setFieldsValue({'phone': 88})
-  //     }}>
-  //       <Option value="86">+86</Option>
-  //       <Option value="87">+87</Option>
-  //     </Select>
-  //   </Form.Item>
-  // );
+  const sights = {
+    Beijing: ['Tiananmen', 'Great Wall'],
+    Shanghai: ['Oriental Pearl', 'The Bund'],
+  };
+
+  type SightsKeys = keyof typeof sights;
 
   return (
     <div>
@@ -219,35 +176,75 @@ const AddTable: React.FC = () => {
       </Button>
       <Form
         form={form}
-        initialValues={{
-          prefix: '86',
-        }}
+        // initialValues={{
+        //   prefix: '86',
+        // }}
       >
-        <div>
-          <Form.Item name="prefix">
-            <Select
-              style={{ width: 70 }}
-              onChange={() => {
-                form.setFieldsValue({ phone: 88 });
-              }}
-            >
-              <Option value="86">+86</Option>
-              <Option value="87">+87</Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            name="phone"
-            label="Phone Number"
-            rules={[
-              { required: true, message: 'Please input your phone number!' },
-            ]}
-          >
-            {/* <Input addonBefore={prefixSelector} style={{ width: '100%' }} /> */}
-            <DatePicker.RangePicker style={{ width: '100%' }} />
-          </Form.Item>
-        </div>
+        <Form.List name="sights">
+          {(fields, { add, remove }) => {
+            console.log(fields, 'fieldsfields');
+            return (
+              <>
+                {fields.map((field) => (
+                  <Space key={field.key} align="baseline">
+                    {/* <Form.Item
+                  noStyle
+                  shouldUpdate={(prevValues, curValues) =>
+                    prevValues.area !== curValues.area || prevValues.sights !== curValues.sights
+                  }
+                >
+                  {() => (
+                    <Form.Item
+                      {...field}
+                      label="Sight"
+                      name={[field.name, 'sight']}
+                      rules={[{ required: true, message: 'Missing sight' }]}
+                    >
+                      <Select disabled={!form.getFieldValue('area')} style={{ width: 130 }}>
+                        {(sights[form.getFieldValue('area') as SightsKeys] || []).map(item => (
+                          <Option key={item} value={item}>
+                            {item}
+                          </Option>
+                        ))}
+                      </Select>
+                    </Form.Item>
+                  )}
+                </Form.Item>
+                <Form.Item
+                  {...field}
+                  label="Price"
+                  name={[field.name, 'price']}
+                  rules={[{ required: true, message: 'Missing price' }]}
+                >
+                  <Input />
+                </Form.Item>
 
-        <Table bordered dataSource={data} columns={columns} rowKey="id" />
+                <MinusCircleOutlined onClick={() => remove(field.name)} /> */}
+                    <Table
+                      bordered
+                      dataSource={data}
+                      columns={columns}
+                      rowKey="id"
+                    />
+                  </Space>
+                ))}
+
+                <Form.Item>
+                  <Button
+                    type="dashed"
+                    onClick={() => add()}
+                    block
+                    icon={<PlusOutlined />}
+                  >
+                    Add sights
+                  </Button>
+                </Form.Item>
+              </>
+            );
+          }}
+
+          {/* <Table bordered dataSource={data} columns={columns} rowKey="id" /> */}
+        </Form.List>
       </Form>
     </div>
   );

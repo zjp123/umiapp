@@ -14,6 +14,8 @@ export default [
   { path: '/hoc', component: '@/pages/hoc/hoc.js' },
   { path: '/filelet', component: '@/pages/file-let/file-let.js' },
   { path: '/addtable', component: '@/pages/addtable' },
+  { path: '/addtablearr', component: '@/pages/addtable-arr' },
+  { path: '/formtable', component: '@/pages/formTable' },
   { path: '/swiper', component: '@/pages/zoumadeng' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
