@@ -17,6 +17,7 @@ export default [
   { path: '/addtablearr', component: '@/pages/addtable-arr' },
   { path: '/formtable', component: '@/pages/formTable' },
   { path: '/swiper', component: '@/pages/zoumadeng' },
+  { path: '/swiper2', component: '@/pages/zoumadeng-daping' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
