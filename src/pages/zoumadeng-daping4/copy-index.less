@@ -1,0 +1,340 @@
+.box {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/exam-big-bc.png')
+    no-repeat center;
+  border: 1px solid red;
+  * {
+    box-sizing: border-box;
+  }
+  #vir-box {
+    display: none;
+  }
+  #flex-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  //   div {
+  //     height: 100%;
+  //   }
+  .slick-track,
+  .ant-carousel,
+  .slick-slider.slick-initialized,
+  .slick-list {
+    height: 100%;
+  }
+  .slick-slide {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
+  .ant-carousel .slick-list .slick-slide {
+    display: flex;
+    flex-direction: column;
+    > div {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+  }
+  .leval-one {
+    position: relative;
+    // background-color: red;
+    display: flex !important;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .screen-head {
+    position: relative;
+    display: flex;
+    height: 0.9rem;
+    // height: 10.185185vh;
+    border: 1px solid yellow;
+    // height: 0.9em;
+    // align-items: center;
+    .head-left {
+      // background: url('../../images/head-left.png') no-repeat;
+      // padding: 0 9px;
+      // width: 6.66rem;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      height: 100%;
+      background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/head-left.png')
+        no-repeat;
+      background-size: 100%;
+      img {
+        width: 1.96rem;
+        height: 0.72rem;
+      }
+    }
+    .head-center {
+      position: relative;
+      // background-size: 100% 0.84444em;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #fff;
+      // height: 0.79rem;
+      // background: url('../../images/head-center.png') repeat-x center;
+      background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/head-center.png')
+        repeat-x;
+      background-size: 100% 0.84555rem;
+      // .head-center-bac {
+      //   justify-content: center;
+      // }
+      .tablist {
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        // height: 14px;
+        // font-size: 14px;
+        div {
+          // flex: 0.7;
+          // width: 100px;
+          display: flex;
+          // flex-direction: column;
+          align-items: center;
+          // text-align: center;
+          justify-content: center;
+          width: 1.25rem;
+          // border: 1px solid yellow;
+          height: 5px;
+          text-align: center;
+          background-color: #1890ff;
+          border-radius: 3px;
+        }
+      }
+    }
+    .head-right {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: end;
+      height: 100%;
+      background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/head-right.png')
+        no-repeat;
+      background-size: 100%;
+      .right-time {
+        display: flex;
+        flex-direction: column;
+        width: 1.96rem;
+        height: 0.72rem;
+        color: #fff;
+        border: 1px solid #1890ff;
+        .time-hours {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.22rem;
+          border-bottom: 1px solid #1890ff;
+        }
+        .time-week {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.22rem;
+        }
+        // display: flex;
+        // flex-direction: column;
+      }
+    }
+    .title-dec {
+      position: absolute;
+      top: 40%;
+      // width: 100%;
+      // height: 100%;
+      left: 50%;
+      color: #fff;
+      font-size: 0.46rem;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .call-text-box {
+    display: flex;
+    height: 0.81rem;
+    margin-top: 0.1rem;
+    .call-long {
+      width: 15.46rem;
+      height: 100%;
+      background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/call-long.png')
+        no-repeat;
+      background-size: 100%;
+    }
+    .call-duan {
+      flex: 1;
+      height: 100%;
+      margin-left: 0.1rem;
+      background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/call-duan.png')
+        no-repeat;
+      background-size: 100%;
+    }
+  }
+  #num-list {
+    flex: 1;
+    margin-top: 0.1rem;
+    padding: 0.12rem;
+    border: 1px solid #faad14;
+    .num-list-row {
+      display: flex;
+      height: 1.02rem;
+      margin-bottom: 0.1rem;
+      .num-item {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: center;
+        height: 100%;
+        margin-right: 0.11rem;
+        color: #fff;
+        font-size: 0.5rem;
+        background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/text-box.png')
+          no-repeat;
+        background-size: 100%;
+        &:last-child {
+          margin-right: 0;
+        }
+        .haoma {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+  }
+  #wait-call {
+    flex: 1;
+    margin-top: 0.1rem;
+    padding: 0.12rem;
+    border: 1px solid #faad14;
+    .num-list-row {
+      display: flex;
+      height: 1.02rem;
+      margin-bottom: 0.1rem;
+      .num-item {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: center;
+        height: 100%;
+        margin-right: 0.11rem;
+        color: #fff;
+        font-size: 0.5rem;
+        background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/text-box.png')
+          no-repeat;
+        background-size: 100%;
+        &:last-child {
+          margin-right: 0;
+        }
+        .haoma {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+// 重构
+.bottom-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0.58rem;
+  border: 1px solid #fff;
+}
+.center-box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 0.58rem;
+  border: 1px solid #fff;
+  .center-box-top {
+    flex: 8;
+    border: 1px solid #fff;
+  }
+  .center-box-bottom {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    border: 1px solid red;
+    .call-text-box {
+      display: flex;
+      height: 0.81rem;
+      margin-top: 0.1rem;
+      .call-long {
+        width: 15.46rem;
+        height: 100%;
+        background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/call-long.png')
+          no-repeat;
+        background-size: 100%;
+      }
+      .call-duan {
+        flex: 1;
+        height: 100%;
+        margin-left: 0.1rem;
+        background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/call-duan.png')
+          no-repeat;
+        background-size: 100%;
+      }
+    }
+    .line-row-box {
+      // border: 1px solid #fff;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      .num-list-row {
+        display: flex;
+        // margin-bottom: 0.1rem;
+        height: 1.02rem;
+        .num-item {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: space-between;
+          justify-content: center;
+          height: 100%;
+          margin-right: 0.11rem;
+          color: #fff;
+          font-size: 0.5rem;
+          background: url('http://j1.58cdn.com.cn/dist/jxt/static/images/text-box.png')
+            no-repeat;
+          background-size: 100%;
+          &:last-child {
+            margin-right: 0;
+          }
+          .haoma {
+            margin-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
