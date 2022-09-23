@@ -20,6 +20,7 @@ export default [
   { path: '/swiper2', component: '@/pages/zoumadeng-daping' },
   { path: '/swiper3', component: '@/pages/zoumadeng-daping2' },
   { path: '/swiper4', component: '@/pages/zoumadeng-daping4' },
+  { path: '/effectref', component: '@/pages/effect-ref' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
