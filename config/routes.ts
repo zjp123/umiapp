@@ -21,6 +21,8 @@ export default [
   { path: '/swiper3', component: '@/pages/zoumadeng-daping2' },
   { path: '/swiper4', component: '@/pages/zoumadeng-daping4' },
   { path: '/yuanshengswiper', component: '@/pages/swiper-page' },
+  { path: '/effectref', component: '@/pages/effect-ref' },
+  { path: '/forwardRef', component: '@/pages/forwardRef' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
