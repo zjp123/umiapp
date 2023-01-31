@@ -23,6 +23,7 @@ export default [
   { path: '/yuanshengswiper', component: '@/pages/swiper-page' },
   { path: '/effectref', component: '@/pages/effect-ref' },
   { path: '/forwardRef', component: '@/pages/forwardRef' },
+  { path: '/map', component: '@/pages/map' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
