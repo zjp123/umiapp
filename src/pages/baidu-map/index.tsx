@@ -160,14 +160,15 @@ const BaiduMap: React.FC<BaiduMapProps> = ({ getPosition, ...props }) => {
         title: '故宫博物院',
       };
       var infoWindow = new BMap.InfoWindow(
-        `<div class="haha-clas"><p>哈哈哈</p><p>地址：北京市东城区王府井大街88号乐天银泰百货八层</p></div>`,
+        `<div class="haha-clas"><p class="kkkk">哈哈哈</p><p>地址：北京市东城区王府井大街88号乐天银泰百货八层</p></div>`,
         opts,
       );
       // 点标记添加点击事件
       mk.addEventListener('click', () => {
-        map.openInfoWindow(infoWindow, point); // 开启信息窗口
+        // map.openInfoWindow(infoWindow, point); // 开启信息窗口
+        mk.openInfoWindow(infoWindow, point); // 开启信息窗口
         setTimeout(() => {
-          const hahaid: any = document.getElementsByClassName('haha-clas')[0];
+          const hahaid: any = document.getElementsByClassName('kkkk')[0];
           console.log(hahaid, 'hahaidhahaid');
           if (hahaid) {
             hahaid.onclick = function name() {
@@ -229,14 +230,16 @@ const BaiduMap: React.FC<BaiduMapProps> = ({ getPosition, ...props }) => {
           input: 'suggestId',
           location: map,
         });
-        ac.addEventListener('onhighlight', handleHighlight);
+        // ac.addEventListener('onhighlight', handleHighlight);
         ac.addEventListener('onconfirm', handleConform);
       }
       const allps = [
         // {lng: 115.48754503343376, lat: 35.23940742476551},
-        { lon: 115.54845724362382, lat: 34.83180934841467, name: '张三' },
-        { lon: 115.42344303020836, lat: 35.25701817606895, name: '李四' },
+        { lon: 115.58966269702759, lat: 35.111323663894396, name: '张三' },
+        { lon: 115.49901199309919, lat: 35.24000389670641, name: '李四' },
+        { lon: 115.54845383006287, lat: 34.83180897804281, name: '大刀王五' },
       ];
+
       setAllpos(allps);
       // addAllMarker()
 
