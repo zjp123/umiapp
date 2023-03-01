@@ -19,7 +19,8 @@
         "src:///src/*": "${webRoot}/*"
       },
       "resolveSourceMapLocations": [
-        "${workspaceFolder}/dist/*"
+        "${workspaceFolder}/src/.umi/.cache/.mfsu/"
+        // "${workspaceFolder}/src/.umi/electron/**",
         // "${workspaceFolder}/src/renderer/.umi/electron/**"
       ]
       // "autoAttachChildProcesses": true
