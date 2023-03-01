@@ -8,21 +8,20 @@
       "type": "chrome",
       "request": "launch",
       "name": "debugger umi",
-      "url": "http://localhost:8002",
-      "webRoot": "${workspaceFolder}/src",
-      "sourceMaps": true,
-      "sourceMapPathOverrides": {
-        "webpack:///src/*": "${webRoot}/*",
-
-        "webpack:///./*": "${webRoot}/*",
-        "webpack:///*": "*",
-        "src:///src/*": "${webRoot}/*"
-      },
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/src/.umi/.cache/.mfsu/"
-        // "${workspaceFolder}/src/.umi/electron/**",
-        // "${workspaceFolder}/src/renderer/.umi/electron/**"
-      ]
+      "url": "http://localhost:8001",
+      "webRoot": "${workspaceFolder}"
+      // "sourceMaps": true,
+      // "sourceMapPathOverrides": {
+      //   "webpack:///./*": "${webRoot}/*",
+      //   "webpack:///src/*": "${webRoot}/*",
+      //   "webpack:///*": "*",
+      //   "src:///src/*": "${webRoot}/*"
+      // },
+      // "resolveSourceMapLocations": [
+      //   "${workspaceFolder}/src/.umi/.cache/.mfsu/"
+      //   // "${workspaceFolder}/src/.umi/electron/**",
+      //   // "${workspaceFolder}/src/renderer/.umi/electron/**"
+      // ]
       // "autoAttachChildProcesses": true
     }
   ]
