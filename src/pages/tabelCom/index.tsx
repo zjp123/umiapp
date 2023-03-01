@@ -6,7 +6,7 @@ interface ObjP {
   props: any;
 }
 function TabelCom(props: any) {
-  console.log(props, 'propspropsprops');
+  console.log(props, 'propspropsprops1');
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
   // const masterProps = useModel('@@qiankunStateFromMaster');
