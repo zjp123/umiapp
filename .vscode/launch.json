@@ -7,18 +7,38 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "debugger umi",
-      "url": "http://localhost:8001",
-      "webRoot": "${workspaceFolder}"
-      // "sourceMaps": true,
+      "name": "debugger umiapp",
+      "url": "http://localhost:8002",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapRenames": true
+      // "urlFilter": "http://localhost:8002/static"
       // "sourceMapPathOverrides": {
-      //   "webpack:///./*": "${webRoot}/*",
-      //   "webpack:///src/*": "${webRoot}/*",
-      //   "webpack:///*": "*",
-      //   "src:///src/*": "${webRoot}/*"
+      //   "webpack:/*": "${webRoot}/*",
+      //   "webpack:///*":"/*",
+      //   "webpack:///static/*": "${webRoot}/*",
+      //   "webpack:///preonline/*": "${webRoot}/*",
+      //   "/./*": "${webRoot}/*",
+      //   "/src/*": "${webRoot}/*",
+      //   "/static/*": "${webRoot}/*",
+      //   "/preonline/*": "${webRoot}/*",
+      //   "/*": "*",
+      //   "/./~/*": "${webRoot}/node_modules/*",
+      //   "webpack://react-app/src/*": "${webRoot}/src/*"
+      // },
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js",
+      //   "!**/node_modules/**"
+      // ],
+      // "sourceMapPathOverrides": {
+      //   "webpack:///./*": "http://localhost:8002/static/js/*",
+      //   // "webpack:///src/*": "${webRoot}/*",
+      //   // "webpack:///*": "*",
+      //   // "src:///src/*": "${webRoot}/*",
+      //   // "static:///static/*": "${webRoot}/*",
       // },
       // "resolveSourceMapLocations": [
-      //   "${workspaceFolder}/src/.umi/.cache/.mfsu/"
+      //   "http://localhost:8002/static/js/*",
       //   // "${workspaceFolder}/src/.umi/electron/**",
       //   // "${workspaceFolder}/src/renderer/.umi/electron/**"
       // ]

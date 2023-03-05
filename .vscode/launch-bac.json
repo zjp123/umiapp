@@ -1,0 +1,35 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "debugger umi",
+      "url": "http://localhost:8001",
+      "webRoot": "${workspaceFolder}"
+      // "sourceMaps": true,
+      // "sourceMapPathOverrides": {
+      //   "webpack:///./*": "${webRoot}/*",
+      //   "webpack:///src/*": "${webRoot}/*",
+      //   "webpack:///*": "*",
+      //   "src:///src/*": "${webRoot}/*"
+      // },
+      // "resolveSourceMapLocations": [
+      //   "${workspaceFolder}/src/.umi/.cache/.mfsu/"
+      //   // "${workspaceFolder}/src/.umi/electron/**",
+      //   // "${workspaceFolder}/src/renderer/.umi/electron/**"
+      // ]
+      // "autoAttachChildProcesses": true
+    }
+  ]
+}
+
+// "sourceMapPathOverrides": {
+//     "webpack:///./*": "${webRoot}/*",
+//     "webpack:///src/*": "${webRoot}/*",
+//     "webpack:///*": "*",
+//     "src:///src/*": "${webRoot}/*"
+// }

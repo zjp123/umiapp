@@ -9,8 +9,7 @@ function TabelCom(props: any) {
   console.log(props, 'propspropsprops1');
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
-  // const masterProps = useModel('@@qiankunStateFromMaster');
-
+  debugger;
   const renderContent = (value: any, row: any, index: any) => {
     const obj: ObjP = {
       children: value,
@@ -28,7 +27,15 @@ function TabelCom(props: any) {
       dataIndex: 'name',
       render: (text: any, row: any, index: any) => {
         if (index < 4) {
-          return <a>{text}</a>;
+          return (
+            <a
+              onClick={() => {
+                debugger;
+              }}
+            >
+              {text}
+            </a>
+          );
         }
         return {
           children: <a>{text}</a>,
