@@ -9,7 +9,7 @@ function TabelCom(props: any) {
   console.log(props, 'propspropsprops1');
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
-  debugger;
+  // debugger;
   const renderContent = (value: any, row: any, index: any) => {
     const obj: ObjP = {
       children: value,

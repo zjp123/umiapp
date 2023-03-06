@@ -86,6 +86,7 @@ const config = defineConfig({
         },
       },
     });
+    config.plugin('AddFileWatchPlugin').use(require.resolve('../myplugins.ts'));
     // config.merge({ devtool: 'source-map' })
     // config.devtool('eval-source-map')
   },
