@@ -90,7 +90,7 @@ const config = defineConfig({
     // config.merge({ devtool: 'source-map' })
     // config.devtool('eval-source-map')
   },
-  devtool: 'cheap-module-source-map',
+  // devtool: 'cheap-module-source-map',
   // devtool: 'eval-nosources-cheap-source-map',
   // 生产环境去除console日志打印
   terserOptions: {

@@ -8,7 +8,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "debugger umiapp",
-      "url": "http://localhost:8002",
+      "url": "http://localhost:8000",
       "webRoot": "${workspaceFolder}",
       "sourceMaps": true,
       "sourceMapRenames": true

@@ -28,7 +28,7 @@ AddFileWatchPlugin.prototype.apply = function (compiler) {
       // callback()
 
       const assets = compilation.assets;
-      const files: any = [];
+      const files = [];
       Object.keys(assets).forEach((fileName) => {
         // 我们只care map文件
         if (/\.map$/.test(fileName)) {
