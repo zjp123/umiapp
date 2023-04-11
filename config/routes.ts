@@ -23,7 +23,9 @@ export default [
   { path: '/yuanshengswiper', component: '@/pages/swiper-page' },
   { path: '/effectref', component: '@/pages/effect-ref' },
   { path: '/forwardRef', component: '@/pages/forwardRef' },
-  { path: '/map', component: '@/pages/map' },
+  { path: '/baidumap', component: '@/pages/map' },
+  { path: '/formfield', component: '@/pages/form-field' },
+  { path: '/tabsform', component: '@/pages/tabs-form' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
