@@ -26,6 +26,7 @@ export default [
   { path: '/baidumap', component: '@/pages/map' },
   { path: '/formfield', component: '@/pages/form-field' },
   { path: '/tabsform', component: '@/pages/tabs-form' },
+  { path: '/tree', component: '@/pages/tree-com' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
