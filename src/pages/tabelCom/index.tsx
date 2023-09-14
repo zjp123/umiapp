@@ -6,6 +6,7 @@ interface ObjP {
   props: any;
 }
 function TabelCom(props: any) {
+  console.log(aaaa);
   console.log(props, 'propspropsprops');
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
