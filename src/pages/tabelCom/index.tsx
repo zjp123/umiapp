@@ -1,15 +1,21 @@
 // import styles from './index.less';
 import { Table } from 'antd';
 import { connectMaster } from 'umi';
+// import {defalut as num} from './test'
+// import {num} from './test'
+import num from './test';
 interface ObjP {
   children: any;
   props: any;
 }
 function TabelCom(props: any) {
-  console.log(props, 'propspropsprops1');
+  console.log(props, num, 'propspropsprops1');
   // In the fifth row, other columns are merged into first column
   // by setting it's colSpan to be 0
-  debugger;
+  // debugger;
+  setTimeout(() => {
+    console.log(num);
+  }, 5000);
   const renderContent = (value: any, row: any, index: any) => {
     const obj: ObjP = {
       children: value,
