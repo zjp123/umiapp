@@ -8,12 +8,12 @@ function IndexPage(props: any) {
   // const masterProps = useModel('@@qiankunStateFromMaster');
   useEffect(() => {
     setTimeout(() => {
-      props.setMasterState({ str: 'bbb' });
+      // props.setMasterState({ str: 'bbb' });
     }, 2000);
   }, []);
   return (
     <div>
-      <h1 className={styles.title}>子应用app1{props.masterState.str}</h1>
+      <h1 className={styles.title}>子应用app1{props?.masterState?.str}</h1>
       {/* <h1 className={styles.title}>子应用app1{masterProps.masterState.str}</h1> */}
     </div>
   );
