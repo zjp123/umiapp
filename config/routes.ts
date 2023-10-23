@@ -24,6 +24,7 @@ export default [
   { path: '/effectref', component: '@/pages/effect-ref' },
   { path: '/forwardRef', component: '@/pages/forwardRef' },
   { path: '/map', component: '@/pages/map' },
+  { path: '/hochooks', component: '@/pages/hoc-hooks/index.tsx' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
