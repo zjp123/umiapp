@@ -5,7 +5,7 @@ import routes from './routes';
 // import fs from 'fs'
 
 const isEnvProduction = process.env.UMI_ENV === 'production';
-const isDevCom = Boolean(process.env.DEV_COM);
+// const isDevCom = Boolean(process.env.DEV_COM);
 // 获取组件库相对于项目的文件路径要确保组件库目录和项目库目录在同一文件夹下
 // const jxtComPath = path.join(path.join(__dirname, '../../../jxt-components-test'))
 
