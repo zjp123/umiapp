@@ -26,6 +26,7 @@ export default [
   { path: '/formField', component: '@/pages/form-field' },
   { path: '/map', component: '@/pages/map' },
   { path: '/hochooks', component: '@/pages/hoc-hooks/index.tsx' },
+  { path: '/filter-table', component: '@/pages/filter-table/index.tsx' },
   // { path: '/app1', component: '@/micro/app1' },
   // { path: '/app2', component: '@/micro/app2' },
 ];
